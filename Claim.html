@@ -7,24 +7,23 @@
 	
 	<script type="text/javascript" >  
 		
-		function validate() {
-		var x = document.getElementById("valNum");
+				function validate() {
+		var x = document.getElementById("tnum");
 		if(x.value === ""){  
 			alert("Form cannot be blank!");  
 			return false;
 			}	  
-		else if(x.value.length !== 6)
+		else if(x.value.length < 6)
 			{
 				alert("Must be 6 characters in length");
 				return false;
 			}  
 			
-			else(x.value.length == 6)
+			else(x.value.length ==6 || x.vslue.length >6)
 			{
 				return true;
 			}
 		}  
-  
 </script>  
 	</head>
 
@@ -50,9 +49,9 @@
 		</div>
 		<div id = 'body'>
 		<form = "myForm">
-			<p>Enter tracking number: </p><input type = 'text' id ="valNum">
+			<p>Enter tracking number: </p><input type = 'text' id ="tnum">
 		</form>
-		<a onclick = "return validate()" href = "InfoC.html"><button>Claim</button></a>
+		<a href = "InfoC.html"><input type = 'button' value = 'Claim' onclick = "return validate()"></a>
 
         
         
